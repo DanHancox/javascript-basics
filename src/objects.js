@@ -1,32 +1,48 @@
 const createPerson = (name, age) => {
-  (fred, 79)
-;
+  person = {
+    name,
+    age,
+  }
+  return person
+};
+
+
 const getName = object => {
-  // your code here
+  return object.name;
 };
 
 const getProperty = (property, object) => {
-  // your code here
+  let test = property === 'name' ? object.name: object.age;
+  return test
 };
 
 const hasProperty = (property, object) => {
-  // your code here
+
+  return Object.hasOwn(object, property);
+  
+
 };
 
 const isOver65 = person => {
-  // your code here
+  if (person.age > 65) {
+    return true;
+  }
+    return false;
 };
 
 const getAges = people => {
-  // your code here
+  const ageArray = people.map(array => array.age);
+  return ageArray;
 };
 
 const findByName = (name, people) => {
-  // your code here
+  const findName = people.find (x => x.name === name);
+  return findName;
 };
 
 const findHondas = cars => {
-  // your code here
+  const FindHonda = cars.filter(honda => honda.manufacturer === 'Honda');
+  return FindHonda;
 };
 
 const averageAge = people => {

@@ -35,15 +35,28 @@ const uppercaseWordsInArray = strings => {
 };
 
 const reverseWordsInArray = strings => {
-  // your code here
+  return strings.map(order =>
+    order
+      .split('') //seperate/split array
+      .reverse() // reverse the order
+      .join('') // put back together
+  );
 };
 
 const onlyEven = numbers => {
-  return numbers.filter(numbers % 2 === 0);
+  for (let i = 0; i < numbers.length; i += 1) {
+    if (numbers[i] % 2 !== 0) {
+      numbers.splice(i, 1);
+    }
+  }
+  return numbers;
 };
 
+
 const removeNthElement2 = (index, array) => {
-  // your code here
+    let array2 = [...array];
+    array2.splice(1);
+    return array2
 };
 
 const elementsStartingWithAVowel = strings => {
