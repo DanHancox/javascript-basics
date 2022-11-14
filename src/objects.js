@@ -46,12 +46,21 @@ const findHondas = cars => {
 };
 
 const averageAge = people => {
-  // your code here
+  const totalAge = people.reduce((prevAge, current) => prevAge + current.age, 0);
+  return totalAge / people.length;
 };
 
 const createTalkingPerson = (name, age) => {
-  // your code here
+  const person = {
+    name,
+    age,
+    introduce: guestName => {
+      return `Hi ${guestName}, my name is ${name} and I am ${age}!`;
+    }
+  };
+  return person
 };
+
 
 module.exports = {
   createPerson,
